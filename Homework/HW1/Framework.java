@@ -1,4 +1,4 @@
-import java.io.BufferedReader;
+ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.PrintWriter;
@@ -109,6 +109,16 @@ public class Framework
 		*/
 
 		//YOUR CODE STARTS HERE
+        int n = APrefs.length;
+        LinkedList<Integer> freeE = new LinkedList<>();
+        int[] next = new int[n];
+        int[] curr = new int[n];
+        int[][] rank = new int[n][n];
+
+
+
+
+
 		//YOUR CODE ENDS HERE
 
 		output(Args[1]);
