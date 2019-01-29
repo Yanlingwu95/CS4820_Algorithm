@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+%\usepackage{fullpage}
+\usepackage{epic}
+\usepackage{eepic}
+\usepackage{paralist}
+\usepackage{graphicx}
+\usepackage{algorithm,algorithmic}
+\usepackage{tikz}
+\usepackage{xcolor,colortbl}
+\usepackage{wrapfig}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is FULLPAGE.STY by H.Partl, Version 2 as of 15 Dec 1988.
+% Document Style Option to fill the paper just like Plain TeX.
+
+\typeout{Style Option FULLPAGE Version 2 as of 15 Dec 1988}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+
+\textheight 8.9in
+
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+
+\textwidth 6.5in
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{empty}
+\setlength{\oddsidemargin}{0in}
+\setlength{\topmargin}{-0.8in}
+\setlength{\textwidth}{6.8in}
+\setlength{\textheight}{9.5in}
+
+
+\def\ind{\hspace*{0.3in}}
+\def\gap{0.1in}
+\def\bigap{0.25in}
+\newcommand{\Xomit}[1]{}
+
+
+\begin{document}
+
+\setlength{\parindent}{0in}
+\addtolength{\parskip}{0.1cm}
+\setlength{\fboxrule}{.5mm}\setlength{\fboxsep}{1.2mm}
+\newlength{\boxlength}\setlength{\boxlength}{\textwidth}
+\addtolength{\boxlength}{-4mm}
+\begin{center}\framebox{\parbox{\boxlength}{{\bf
+CS 4820, Spring 2018 \hfill Homework 2, Problem 1}\\
+% TODO: fill in your own name, netID, and collaborators
+Name: \\
+NetID: \\
+Collaborators:
+}}
+\end{center}
+\vspace{5mm}
+
+\textbf{(1.a)} {\em (5 points)} \\
+Consider the scheduling problem in Section 4.2 of the textbook.
+Suppose the goal is to minimize the sum of the latenesses of requests.
+Show that for this objective function, the earliest-deadline-first
+algorithm does not always find an optimal schedule.
+
+\vskip \gap
+\textbf{(1.b)} {\em (10 points)} \\
+Again consider the scheduling problem in Section 4.2 of the textbook.
+Suppose every request has a positive weight $w_i$ and the goal
+is to minimize the weighted sum of latenesses, $\sum_i w_i \ell_i$.
+
+Give an efficient algorithm for the special case that all deadlines
+are equal to the time the resource becomes available (i.e., $d_i=s$ for
+all $i\in \{1,\ldots,n\}$).
+
+
+\vskip \bigap
+
+%% Your solution goes here.
+
+\end{document}

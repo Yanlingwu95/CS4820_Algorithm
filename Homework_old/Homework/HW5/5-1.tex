@@ -1,0 +1,108 @@
+\documentclass[11pt]{article}
+%\usepackage{fullpage}
+\usepackage{epic}
+\usepackage{eepic}
+\usepackage{paralist}
+\usepackage{graphicx}
+\usepackage{algorithm,algorithmic}
+\usepackage{tikz}
+\usepackage{xcolor,colortbl}
+\usepackage{wrapfig}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is FULLPAGE.STY by H.Partl, Version 2 as of 15 Dec 1988.
+% Document Style Option to fill the paper just like Plain TeX.
+
+\typeout{Style Option FULLPAGE Version 2 as of 15 Dec 1988}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+
+\textheight 8.9in
+
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+
+\textwidth 6.5in
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{empty}
+\setlength{\oddsidemargin}{0in}
+\setlength{\topmargin}{-0.8in}
+\setlength{\textwidth}{6.8in}
+\setlength{\textheight}{9.5in}
+
+
+\def\ind{\hspace*{0.3in}}
+\def\gap{0.1in}
+\def\bigap{0.25in}
+\newcommand{\Xomit}[1]{}
+
+
+\begin{document}
+
+\setlength{\parindent}{0in}
+\addtolength{\parskip}{0.1cm}
+\setlength{\fboxrule}{.5mm}\setlength{\fboxsep}{1.2mm}
+\newlength{\boxlength}\setlength{\boxlength}{\textwidth}
+\addtolength{\boxlength}{-4mm}
+\begin{center}\framebox{\parbox{\boxlength}{{\bf
+CS 4820, Spring 2018 \hfill Homework 4, Problem 1}\\
+% TODO: fill in your own name, netID, and collaborators
+Name: \\
+NetID: \\
+Collaborators:
+}}
+\end{center}
+\vspace{5mm}
+
+{\bf (1)} {\em (Note: This problem is Exercise 5.3 in Kleinberg \& Tardos,
+with an extra ``part b'' appended.)}\\
+Suppose you're consulting for a bank that's concerned about 
+fraud detection, and they come to you with the following
+problem. They have a collection of $n$ bank cards that they've
+confiscated, suspecting them of being used in fraud. Each bank 
+card is a small plastic object, containing a magnetic stripe
+with some encrypted data, and it corresponds to a unique 
+account in the bank. Each account can have many bank cards
+corresponding to it, and we'll say that two bank cards are
+{\em equivalent} if they correspond to the same account.
+
+It's very difficult to read the account number off a bank card
+directly, but the bank has a high-tech ``equivalence tester'' that
+takes two bank cards and, after performing some computations,
+determines whether they are equivalent.
+
+Their question is the following: among the collection of 
+$n$ cards, is there a set of more than $n/2$ of them that are
+all equivalent to one another? Assume that the only feasible 
+operations you can do with the cards are to pick two of them
+and plug them into the equivalence tester. 
+
+\vskip \gap
+{\bf (a)} {\em (5 points)}
+Show how to decide the answer to their question with 
+only $O(n \log n)$ invocations of the equivalence tester.
+
+\vskip \gap
+{\bf (b)} {\em (5 points)}
+Now modify the question so that you must decide whether there
+is a set of more than $n/4$ of the cards that are all equivalent
+to one another. Show how to decide the answer to this question
+with only $O(n \log n)$ invocations of the equivalence
+tester. 
+
+{\bf \itshape{If you are confident that you have a correct solution to
+part (b) of this problem, you can skip part (a) and 
+your score on the problem will be computed by doubling
+your score for part (b).}}
+
+
+\vskip \bigap
+
+%% Your solution goes here.
+
+\end{document}

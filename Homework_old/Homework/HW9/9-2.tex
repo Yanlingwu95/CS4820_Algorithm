@@ -1,0 +1,86 @@
+\documentclass[11pt]{article}
+%\usepackage{fullpage}
+\usepackage{epic}
+\usepackage{eepic}
+\usepackage{paralist}
+\usepackage{graphicx}
+\usepackage{algorithm,algorithmic}
+\usepackage{tikz}
+\usepackage{xcolor,colortbl}
+\usepackage{wrapfig}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is FULLPAGE.STY by H.Partl, Version 2 as of 15 Dec 1988.
+% Document Style Option to fill the paper just like Plain TeX.
+
+\typeout{Style Option FULLPAGE Version 2 as of 15 Dec 1988}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+
+\textheight 8.9in
+
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+
+\textwidth 6.5in
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{empty}
+\setlength{\oddsidemargin}{0in}
+\setlength{\topmargin}{-0.8in}
+\setlength{\textwidth}{6.8in}
+\setlength{\textheight}{9.5in}
+
+
+\def\ind{\hspace*{0.3in}}
+\def\gap{0.1in}
+\def\bigap{0.25in}
+\newcommand{\Xomit}[1]{}
+
+
+\begin{document}
+
+\setlength{\parindent}{0in}
+\addtolength{\parskip}{0.1cm}
+\setlength{\fboxrule}{.5mm}\setlength{\fboxsep}{1.2mm}
+\newlength{\boxlength}\setlength{\boxlength}{\textwidth}
+\addtolength{\boxlength}{-4mm}
+\begin{center}\framebox{\parbox{\boxlength}{{\bf
+CS 4820, Spring 2018 \hfill Homework 9, Problem 1}\\
+% TODO: fill in your own name, netID, and collaborators
+Name: \\
+NetID: \\
+Collaborators:
+}}
+\end{center}
+\vspace{5mm}
+
+{\bf (2)} {\em (10 points)}
+Let us call a Turing machine $M$ ``speedy'' if it has the following
+property: for every input string $x$, the computation of $M$ on 
+input $x$ terminates, and it does so after at most $|x| + 100$ steps. 
+
+Design an algorithm to decide whether a Turing machine is speedy,
+given a description of the Turing machine. In more detail, the
+input to your algorithm consists {\em only} of the description
+of a machine $M$ (in particular the input to your algorithm does
+not specify any particular input string for $M$) and its output
+should be ``yes'' if $M$ is speedy and ``no'' if $M$ is not speedy.
+
+In your solution you should describe the algorithm --- an ordinary
+algorithm description is fine, no need to explain how to implement
+the algorithm as a Turing machine. Prove that your algorithm
+always terminates, and prove that it always outputs the correct
+answer. However, {\em you do not need to analyze your algorithm's
+running time, other than proving that it always terminates.}
+
+
+\vskip \bigap
+
+%% Your solution goes here.
+
+\end{document}

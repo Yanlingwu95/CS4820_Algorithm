@@ -1,0 +1,93 @@
+\documentclass[11pt]{article}
+%\usepackage{fullpage}
+\usepackage{epic}
+\usepackage{eepic}
+\usepackage{paralist}
+\usepackage{graphicx}
+\usepackage{algorithm,algorithmic}
+\usepackage{tikz}
+\usepackage{xcolor,colortbl}
+\usepackage{wrapfig}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is FULLPAGE.STY by H.Partl, Version 2 as of 15 Dec 1988.
+% Document Style Option to fill the paper just like Plain TeX.
+
+\typeout{Style Option FULLPAGE Version 2 as of 15 Dec 1988}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+
+\textheight 8.9in
+
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+
+\textwidth 6.5in
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{empty}
+\setlength{\oddsidemargin}{0in}
+\setlength{\topmargin}{-0.8in}
+\setlength{\textwidth}{6.8in}
+\setlength{\textheight}{9.5in}
+
+
+\def\ind{\hspace*{0.3in}}
+\def\gap{0.1in}
+\def\bigap{0.25in}
+\newcommand{\Xomit}[1]{}
+
+
+\begin{document}
+
+\setlength{\parindent}{0in}
+\addtolength{\parskip}{0.1cm}
+\setlength{\fboxrule}{.5mm}\setlength{\fboxsep}{1.2mm}
+\newlength{\boxlength}\setlength{\boxlength}{\textwidth}
+\addtolength{\boxlength}{-4mm}
+\begin{center}\framebox{\parbox{\boxlength}{{\bf
+CS 4820, Spring 2018 \hfill Homework 8, Problem 2}\\
+% TODO: fill in your own name, netID, and collaborators
+Name: \\
+NetID: \\
+Collaborators:
+}}
+\end{center}
+\vspace{5mm}
+
+{\bf (2)} {\em (10 = 2+8 points)}
+In the {\sc Paired Interval Scheduling} problem one is given sets
+$S_1,\ldots,S_n \subset \mathbb{R}$, each of which is a union
+of two disjoint closed intervals with distinct integer 
+endpoints. In other words, $S_i = [a_i,b_i] \cup [c_i,d_i]$
+where $a_i < b_i < c_i < d_i$ are all integers. One is also
+given a positive integer $k \le n$. The problem is to decide
+whether there exist $k$ pairwise disjoint sets among the 
+collection $\{S_1,\ldots,S_n\}$. 
+
+{\bf (a)} {\em (2 points)} 
+What is wrong with the following incorrect proof that 
+{\sc Paired Interval Scheduling} is NP-complete?
+\begin{quotation}
+\noindent Faced with an instance of the {\sc Paired Interval
+Scheduling} problem, we can form a \emph{conflict graph} whose
+vertex set is $\{1,\ldots,n\}$, 
+with an edge joining $i$ to $j$ if $S_i$ and $S_j$
+intersect. The problem asks whether this
+graph contains an independent set of size $k$.  The
+{\sc Independent Set} problem is NP-Complete, so the
+{\sc Paired Interval Scheduling} problem is also NP-Complete.
+\end{quotation}
+
+{\bf (b)} {\em (8 points)} Prove that 
+{\sc Paired Interval Scheduling} is NP-complete.
+
+\vskip \bigap
+
+%% Your solution goes here.
+
+\end{document}

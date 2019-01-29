@@ -1,0 +1,91 @@
+\documentclass[11pt]{article}
+%\usepackage{fullpage}
+\usepackage{epic}
+\usepackage{eepic}
+\usepackage{paralist}
+\usepackage{graphicx}
+\usepackage{algorithm,algorithmic}
+\usepackage{tikz}
+\usepackage{xcolor,colortbl}
+\usepackage{wrapfig}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is FULLPAGE.STY by H.Partl, Version 2 as of 15 Dec 1988.
+% Document Style Option to fill the paper just like Plain TeX.
+
+\typeout{Style Option FULLPAGE Version 2 as of 15 Dec 1988}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+
+\textheight 8.9in
+
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+
+\textwidth 6.5in
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{empty}
+\setlength{\oddsidemargin}{0in}
+\setlength{\topmargin}{-0.8in}
+\setlength{\textwidth}{6.8in}
+\setlength{\textheight}{9.5in}
+
+
+\def\ind{\hspace*{0.3in}}
+\def\gap{0.1in}
+\def\bigap{0.25in}
+\newcommand{\Xomit}[1]{}
+
+
+\begin{document}
+
+\setlength{\parindent}{0in}
+\addtolength{\parskip}{0.1cm}
+\setlength{\fboxrule}{.5mm}\setlength{\fboxsep}{1.2mm}
+\newlength{\boxlength}\setlength{\boxlength}{\textwidth}
+\addtolength{\boxlength}{-4mm}
+\begin{center}\framebox{\parbox{\boxlength}{{\bf
+CS 4820, Spring 2018 \hfill Homework 10, Problem 1}\\
+% TODO: fill in your own name, netID, and collaborators
+Name: \\
+NetID: \\
+Collaborators:
+}}
+\end{center}
+\vspace{5mm}
+
+{ \bf (1)} {\em (10 points)}
+Recall that
+an instance of the halting problem is a string of the form 
+$x;y$ and the goal is to decide if the Turing machine $M_x$ 
+encoded by the string $x$ halts on input $y$.
+If $M_x$ halts on $y$, then $x; y$ is a \textsc{yes} instance.
+Otherwise, $x; y$ is a \textsc{no} instance. Let us say that 
+a Turing machine $M$ \emph{fails to solve} the halting 
+problem for instance $x;y$ if it 
+never terminates or if it produces the wrong answer, 
+i.e., it rejects in case that $x;y$ is a \textsc{yes} instance 
+or it accepts in case that $x;y$ is a \textsc{no} instance.
+
+Because the halting problem is undecidable, we know
+that for every Turing machine $M$ there exists an 
+instance $x;y$ of the halting problem such that $M$
+fails to solve $x;y$. Describe an algorithm to find 
+such an instance. The input to your algorithm is a
+description of a Turing machine $M$. For every such
+input, your algorithm should run for a finite number
+of steps and output
+a halting problem instance $x;y$ such that 
+$M$ fails to solve $x;y$. 
+
+
+\vskip \bigap
+
+%% Your solution goes here.
+
+\end{document}
