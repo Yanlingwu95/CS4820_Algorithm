@@ -156,7 +156,6 @@ public class Framework
 		}
 		// add the matched pairs to MatchedPairsList;
 		for(int i =0; i < n; i++) {
-			//MatchedPair pair = new MatchedPair(i, curr[i]);
 			MatchedPair pair = new MatchedPair(curr[i],i);
             MatchedPairsList.add(pair);
         }
