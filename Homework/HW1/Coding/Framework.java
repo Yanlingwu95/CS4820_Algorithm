@@ -156,7 +156,7 @@ public class Framework
 		}
 		// add the matched pairs to MatchedPairsList;
 		for(int i =0; i < n; i++) {
-			MatchedPair pair = new MatchedPair(curr[i],i);
+			MatchedPair pair = new MatchedPair(i,curr[i]);
             MatchedPairsList.add(pair);
         }
 		//YOUR CODE ENDS HERE
@@ -166,6 +166,9 @@ public class Framework
 
 	public static void main(String [] Args) // Strings in Args are the name of the input file followed by the name of the output file
 	{
+		long sTime = System.currentTimeMillis();
 		new Framework(Args);
+		long fTime = System.currentTimeMillis();
+		System.out.println(-sTime+fTime);
 	}
 }
