@@ -124,10 +124,9 @@ public class Framework
         //Initilize the variables
 		Arrays.fill(next, 0); //Set the initial value of next array to 1;
 		Arrays.fill(curr, -1); //Set the initial values of curr to -1, meaning not hired.
-		for(int i = 0; i < n; i++)
-			freeE.add(i);
 		
 		for(int i = 0; i < n; i++) {
+			freeE.add(i);
 			for(int j = 0; j < n; j++) {
 				ranking[i][APrefs[i][j]] = j;
 			}
@@ -166,9 +165,9 @@ public class Framework
 
 	public static void main(String [] Args) // Strings in Args are the name of the input file followed by the name of the output file
 	{
-		long sTime = System.currentTimeMillis();
+		//long sTime = System.currentTimeMillis();
 		new Framework(Args);
-		long fTime = System.currentTimeMillis();
-		System.out.println(-sTime+fTime);
+		//long fTime = System.currentTimeMillis();
+		//System.out.println(-sTime+fTime);
 	}
 }
