@@ -1,0 +1,21 @@
+{\bf Solution:}\\
+{\bf Algorithm:}\\
+Set the M to empty;\\
+Sort the locations of the stranded people in ascending order and save it as L \\
+Sort the set of segments of the hotel based on the the endpoints of one hotel in ascending order, and save this set as H\\
+for every person p in L: \\
+\hspace*{1cm}for every hotel h in H:\\
+\hspace*{2cm}If the location of p is in the scale of the h\\
+\hspace*{3cm}put the (p,h) into set M;\\
+\hspace*{2cm}EndIf\\
+\hspace*{1cm}EndFor
+\hspace*{1cm}remove p;\\
+EndFor\\
+If the set H is empty: \\
+\hspace*{1cm}It is possible for all people to find accommodation. \\
+Else \\
+\hspace*{1cm} It is impossible; \\
+
+{\bf Running time} should be $O(n^2)$\\
+
+{\bf Proof} \\

@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+%\usepackage{fullpage}
+\usepackage{epic}
+\usepackage{eepic}
+\usepackage{paralist}
+\usepackage{graphicx}
+\usepackage{algorithm,algorithmic}
+\usepackage{tikz}
+\usepackage{xcolor,colortbl}
+\usepackage{wrapfig}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is FULLPAGE.STY by H.Partl, Version 2 as of 15 Dec 1988.
+% Document Style Option to fill the paper just like Plain TeX.
+
+\typeout{Style Option FULLPAGE Version 2 as of 15 Dec 1988}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+
+\textheight 8.9in
+
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+
+\textwidth 6.5in
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{empty}
+\setlength{\oddsidemargin}{0in}
+\setlength{\topmargin}{-0.8in}
+\setlength{\textwidth}{6.8in}
+\setlength{\textheight}{9.5in}
+
+
+\def\ind{\hspace*{0.3in}}
+\def\gap{0.1in}
+\def\bigap{0.25in}
+\newcommand{\Xomit}[1]{}
+
+
+\begin{document}
+
+\setlength{\parindent}{0in}
+\addtolength{\parskip}{0.1cm}
+\setlength{\fboxrule}{.5mm}\setlength{\fboxsep}{1.2mm}
+\newlength{\boxlength}\setlength{\boxlength}{\textwidth}
+\addtolength{\boxlength}{-4mm}
+\begin{center}\framebox{\parbox{\boxlength}{{\bf
+CS 4820, Spring 2019 \hfill Homework 1, Problem 2}\\
+% TODO: fill in your own name, netID, and collaborators
+Name: \\
+NetID: \\
+Collaborators:
+}}
+\end{center}
+\vspace{5mm}
+
+{\bf (1)} {\em (10 points)} Suppose $n \, (\ge 1)$ people are stranded on a freeway due to a particularly heavy snowstorm. 
+Let us model the freeway as the real line. The locations of the stranded people are given by real numbers. 
+An emergency rescue operation found $n$ hotels to potentially accommodate the $n$ people. Assume that each hotel has the capacity to shelter 1 person.
+However, due the prevailing road conditions access to these hotels are severely limited. 
+For each hotel $H$, there is a specific segment of the freeway such that only people stranded in this segment can make it to $H$. 
+Given as input the locations of the stranded people, and a set of $n$ segments of the freeway (each segement corresponding to a particular hotel), your task is to design an efficient algorithm to decide if it is possible for all $n$ people to find accommodation for the night. (Assume that the input contains real numbers of finite precision, so that any arithmetic operation on two real numbers takes constant time. Neither the list of people's locations nor the list of segments are assumed to be sorted in any particular order.)
+
+\vskip \bigap
+
+%% Your solution goes here.
+
+\end{document}

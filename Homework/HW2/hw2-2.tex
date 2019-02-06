@@ -1,0 +1,114 @@
+\documentclass[12pt]{article}
+%\usepackage{fullpage}
+\usepackage{epic}
+\usepackage{eepic}
+\usepackage{paralist}
+\usepackage{graphicx}
+\usepackage{algorithm,algorithmic}
+\usepackage{tikz}
+\usepackage{xcolor,colortbl}
+\usepackage{wrapfig}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is FULLPAGE.STY by H.Partl, Version 2 as of 15 Dec 1988.
+% Document Style Option to fill the paper just like Plain TeX.
+
+\typeout{Style Option FULLPAGE Version 2 as of 15 Dec 1988}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+
+\textheight 8.9in
+
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+
+\textwidth 6.5in
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{empty}
+\setlength{\oddsidemargin}{0in}
+\setlength{\topmargin}{-0.8in}
+\setlength{\textwidth}{6.8in}
+\setlength{\textheight}{9.5in}
+
+
+\def\ind{\hspace*{0.3in}}
+\def\gap{0.1in}
+\def\bigap{0.25in}
+\newcommand{\Xomit}[1]{}
+
+
+\begin{document}
+
+\setlength{\parindent}{0in}
+\addtolength{\parskip}{0.1cm}
+\setlength{\fboxrule}{.5mm}\setlength{\fboxsep}{1.2mm}
+\newlength{\boxlength}\setlength{\boxlength}{\textwidth}
+\addtolength{\boxlength}{-4mm}
+\begin{center}\framebox{\parbox{\boxlength}{{\bf
+CS 4820, Spring 2019 \hfill Homework 2, Problem 2}\\
+% TODO: fill in your own name, netID, and collaborators
+Name: \\
+NetID: \\
+Collaborators:
+}}
+\end{center}
+\vspace{5mm}
+
+\vskip \bigap
+{\bf (2)} {\em (15 points)}
+  Consider the following simplified model of how a law enforcement
+  organization such as the FBI apprehends the members of an
+  organized crime ring. The crime ring has $n$ members, denoted by
+  $x_1,\ldots,x_n$. A {\em law enforcement plan} is a sequence of
+  $n$ actions, each of which is either:
+  \begin{itemize}
+    \item
+      apprehending a member $x_j$ directly: this succeeds with
+      probability $q_j$; or
+    \item
+      apprehending a member $x_j$ using another member, $x_i$, as a decoy:
+      this action can only be taken if $x_i$ was already apprehended in a
+      previous step. The probability of success is $p_{ij}$.
+  \end{itemize}
+  Let's assume that, if an attempt to apprehend $x_j$ fails, then $x_j$
+  will go into hiding in a country that doesn't allow extradition, and
+  hence $x_j$ can never be apprehended after a failed attempt.
+  Therefore, a law enforcement plan is only considered {\em valid} if
+  for each of the crime ring's $n$ members, the plan contains only one
+  attempt to apprehend him or her.
+
+  Assume we are given an input that specifies the number of members
+  in the crime ring, $n$, and the probabilities $q_j$ and $p_{ij}$
+  for each $i \ne j$. You can assume these numbers are strictly
+  positive and that $p_{ij} = p_{ji}$  for all $i \ne j$.
+  \vskip \gap
+{\bf (2a)} {\em (5 points)}
+  Design an algorithm to compute a valid law enforcement plan
+  that maximizes the probability of apprehending all of the
+  crime ring's members, {\em in the order $x_1,x_2,\ldots,x_n$}.
+  In other words, for this part of the problem you should assume
+  that the $j^{\mathrm{th}}$ action in the sequence should be
+  an attempt to apprehend $x_j$, and the only thing your algorithm
+  needs to decide is whether to apprehend $x_j$ directly or to use
+  one of the earlier members as a decoy, and if so, which decoy to
+  use.
+  \vskip \gap
+{\bf (2b)} {\em (10 points)}
+  Design an algorithm to compute a valid law enforcement plan
+  that maximizes the probability of apprehending all of the
+  crime ring's members, {\em in any order}. In other words,
+  for this part of the question, your algorithm must decide
+  on the order in which to apprehend the crime ring's members
+  {\em and} the sequence of operations to use to apprehend
+  them in that order.
+
+\vskip \bigap
+
+%% Your solution goes here.
+
+\end{document}

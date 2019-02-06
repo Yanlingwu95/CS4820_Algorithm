@@ -1,0 +1,53 @@
+{\bf Solution: }\\
+{\bf (2a)}
+{\bf Algorithm:}\\
+Create the set D to store the x that apprehend directly;\\
+Create the set U to store the x that use the earlier member as decoy;\\
+If j == 1:\\
+\hspace*{1cm} Should apprehend $x_1$ directly, store it into D;\\
+For j in n:\\
+\hspace*{1cm}For$(i = 1; i < j;i++)$:\\
+\hspace*{2cm}Find the maximum value between $q_j$ and the $p_{ij}$; \\
+\hspace*{1cm}EndFor\\
+\hspace*{1cm}If maximum value is $q_j$:\\
+\hspace*{2cm}Should apprehend $x_j$ directly, store it into D;\\
+\hspace*{1cm}Else:\\
+\hspace*{1cm}shoul use the earlier member as decoy and store it into U;\\
+EndFor\\
+
+{\bf Running time} should be $O(n^2)$
+
+{\bf Proof} \\
+
+\\
+{\bf (2b)}\\
+{\bf Algorithm:}\\
+Create thee set D to store the x that has been apprehend;\\
+Sort the set of probability Q in descending order;\\
+For i in n:\\
+\hspace*{1cm} Sort the set $p_{ij}, j \in (1,n)$;\\
+\hspace*{1cm} Store the sorted $p_{ij}$ as the $i_{th}$ row of the array P;
+EndFor\\
+Find the maximum $x_max$ in Q as the first one to arrest and store (max,0) to D and remove the $q_max$ from Q;\\
+For i in n-1;\\
+\hspace*{1cm} Select the maximum $q_max$;\\
+\hspace*{1cm} For every member in D:\\
+\hspace*{2cm} Find his maximum probability from Q;\\ 
+\hspace*{1cm} EndFor\\
+\hspace*{1cm} Compare current all maximum probability, find the maximum one, $max_p$;\\
+\hspace*{1cm} If $max_p = q_{max}$:\\
+\hspace*{2cm} Then arrest max directly and store (max,0) into D and remove the $q_max$ from Q;\\
+\hspace*{1cm} Else donate the maximum probability as $p_{ij}$:\\ 
+\hspace*{2cm} compare the $p_{ij}$ with $q_j$\\
+\hspace*{2cm} If $p_{ij} > q_j$:\\ 
+\hspace*{3cm} Use member $x_i$ as decoy to arrest $x_j$, store ($x_j$, $x_i$) to D and remove $q_j$ from Q;\\
+\hspace*{2cm} Else:\\
+\hspace*{3cm} arrest directly and store ($x_j$,0) to D and remove the $q_j$ from Q;\\
+EndFor\\
+Return D\\
+\\
+Note that there will be many pairs in set D, the first number represents the member that arrest, the second number represents how to arrest him. If the second number equals to zero, it means this member is arrested directly, or he is arrested by the second member as decoy. \\
+
+{\bf Running time} should be $O(n^2logn)$\\
+
+{\bf Proof} \\
