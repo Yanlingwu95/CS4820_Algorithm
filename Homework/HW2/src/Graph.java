@@ -66,8 +66,8 @@ public class Graph {
         Arrays.sort(edges);
 
         //Allocate the memory for every node at first and initial them
-        Subset[] subsets = new Subset[N];
-        for (int i = 0; i < N; i++) {
+        Subset[] subsets = new Subset[N+1];
+        for (int i = 1; i < N+1; i++) {
             subsets[i] = new Subset();
             subsets[i].parent = i;
             subsets[i].rank = 0;
