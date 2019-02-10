@@ -16,6 +16,8 @@ If the set H is empty: \\
 Else \\
 \hspace*{1cm} It is impossible; \\
 
-{\bf Running time} should be $O(n^2)$\\
+{\bf Time complexity} The time complexity of the worst case should be $O(n^2)$, but time complexity in average should b $O(nlogn)$
 
 {\bf Proof} \\
+1. If the algorithm outputs yes, the solution will exist obviously and there will no mistake because there is a if_statement to judge whether the person is located in the area of one hotel in the algorithm. Hence if the output is yes, it exist one solution to satisfy the requirement of this question. \\
+2. If the algorithm outputs no, we need to prove the solution does not exist. We could prove this statement by contradiction. Assume that there exists one situation that the algotithm outputs "not exist" but actually it exists one matching way to make every person to accommodation in one hotel. If this situation appears, there exist two persons $p_1, p_2$ and two hotels $h_1, h_2$ that$p_1$ can live in either $h_1$ or $h_2$ but $p_2$ only can live in $h_2$. In the algorithm, $h_2$ was lived by $p_1$ and thus $p_2$ cannot find a hotel to live. Actually, the $p_1$ should live in $h_1$ and $$p_2$ can live in $h_2$. However, When $p_1$ can live in $h_1$ and $p_2$ cannot live in $h_1$, we can know $p_1 < f(h1) < p_2$ f(h1) means the endpoints of $h_1$. And Based on the condition that $p_2$ can live in $h_2$, we can know $f(h_2) > p_2$. So we could know that $f(h_1) < f(h_2)$. So in my algorithm, $p_1$ should be accommodated to $h_1$, which is contradiction. 

@@ -7,7 +7,7 @@ If j == 1:\\
 \hspace*{1cm} Should apprehend $x_1$ directly, store it into D;\\
 For j in n:\\
 \hspace*{1cm}For$(i = 1; i < j;i++)$:\\
-\hspace*{2cm}Find the maximum value between $q_j$ and the $p_{ij}$; \\
+\hspace*{2cm}Find the maximum value between $q_j$ and the $p_{ji}$; \\
 \hspace*{1cm}EndFor\\
 \hspace*{1cm}If maximum value is $q_j$:\\
 \hspace*{2cm}Should apprehend $x_j$ directly, store it into D;\\
@@ -15,9 +15,11 @@ For j in n:\\
 \hspace*{1cm}shoul use the earlier member as decoy and store it into U;\\
 EndFor\\
 
-{\bf Running time} should be $O(n^2)$
+{\bf Time complexity} Running time should be $O(n^2)$, because the statement of "for every j in n:" will take $O(n)$ time and finding the the maximum $p_{ji}$ for every j will take $O(n)$, so overall the algorithm taks $O(n^2)$ time. 
 
 {\bf Proof} \\
+For this question, the apprehending order is given and the apprehended chance of one member only depends on the probability that arrest him directly and the probabilities that use the arrested members as decoies to apprehend him. So if we compare these two kinds f probabilities' maximum value, the maximum probability will decide the way to arrest. 
+
 
 \\
 {\bf (2b)}\\
@@ -48,6 +50,6 @@ Return D\\
 \\
 Note that there will be many pairs in set D, the first number represents the member that arrest, the second number represents how to arrest him. If the second number equals to zero, it means this member is arrested directly, or he is arrested by the second member as decoy. \\
 
-{\bf Running time} should be $O(n^2logn)$\\
+{\bf Time Complexity} Running time of the worst case should be $O(n^3)$, the average running time is $O(n^2log{n})$\\
 
 {\bf Proof} \\
